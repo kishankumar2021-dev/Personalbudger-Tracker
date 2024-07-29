@@ -1,0 +1,22 @@
+                $('#register').on('click',function(event){
+                    var email = $('#email').val();
+                    var password = $('#password').val();
+                    
+                    var isValid = true;
+                    if(email.trim()==''){
+                        $('#EmailError').text('Enter Your Email');
+                        isValid = false;
+                    }else{
+                        $('#EmailError').text('');
+                    }
+                    if(password.trim()==''){
+                        $('#PasswordError').text('Enter Password');
+                    }else{
+                        $('#PasswordError').text('');
+                    }
+                    if(!isValid){
+                        event.preventDefault();
+                    }
+
+
+                });
